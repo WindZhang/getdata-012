@@ -1,0 +1,12 @@
+Code book for the Course project.
+
+Description for tidy1.txt
+
+Col Variables
+
+Subject：
+the ID for the volunteers
+Activity:
+The activity type 
+
+The other variabls are imported for features.txt
