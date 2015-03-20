@@ -98,17 +98,8 @@
 ## write the colnames/rownames back
  x_tidy <- read.table("F:/getdata/tidy.csv", quote="\"")
  colnames(x_tidy) <- descriptive_names_ftr[mean_std_names]
- 
- i =1
- t1 <-data.frame(Subject = rep(i, 6), Activity = rep(act$V2))
- i <- i +1
- 
- while (i <= 30){
-         t2 <-data.frame(Subject = rep(i, 6), Activity = rep(act$V2))
-         t1 <-bind_rows(t1,t2)
-         i <- i +1
-         
- }
+## Write Subject and the Activity Columns 
+ t1 <-data.frame(Subject = rep(1:30, each = 6), Activity = rep(act$V2,30))
  x_tidy1 <- bind_cols(t1, x_tidy)
 ## tidy1.csv the final tidy data
  write.table(x_tidy1, file = "tidy1.txt", row.names = FALSE) 
